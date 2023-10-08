@@ -1,16 +1,13 @@
-const express = require('express');
-const fs = require ('fs');
-const cartsRouter = require('./routes/cartsRouter');
-const productRouter = require('./routes/productRouter');
+import express  from 'express';
+import cartsRouter from './routes/cartsRouter.js';
+import productRouter from './routes/productRouter.js';
 
 const app = express();
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-const productRouter = express.productRouter();
 app.use('api/products', productRouter);
 
-const cartsRouter = express.cartsRouter ();
 app.use ('api/carts', cartsRouter);
 
 

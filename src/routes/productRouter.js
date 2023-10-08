@@ -21,7 +21,7 @@ try {
 
 })
 
-productRouter.get('/:pid', async (res,req)=>{
+productRouter.get('/:pid', async (req,res)=>{
     try {
         const productId = req.params.pid;
         const productos = await manager.getProducts();
@@ -40,7 +40,7 @@ productRouter.get('/:pid', async (res,req)=>{
     
 })
 
-productRouter.post('/', (req, res)=>{
+productRouter.post('/', (req,res)=>{
     
     id: Date.now().toString();
     
@@ -79,11 +79,11 @@ productRouter.post('/', (req, res)=>{
     res.status(200).json(newProduct);
 })
 
-productRouter.put('/:pid', (res,req)=>{
+productRouter.put('/:pid', (req,res)=>{
     
 })
 
-productRouter.delete('/:pid', (res,req)=>{
+productRouter.delete('/:pid', (req,res)=>{
     
 })
 

@@ -2,15 +2,15 @@ import {Router} from 'express';
 
 const cartsRouter = Router ();
 
-cartsRouter.post('/', (res,req)=>{
+cartsRouter.post('/', (req,res)=>{
     
 })
 
-cartsRouter.get('/:cid', (res,req)=>{
+cartsRouter.get('/:cid', (req,res)=>{
     
 })
 
-cartsRouter.post('/:cid/products/:pid', (res,req)=>{
+cartsRouter.post('/:cid/products/:pid', (req,res)=>{
     
 })
 
