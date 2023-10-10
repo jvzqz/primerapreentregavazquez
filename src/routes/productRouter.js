@@ -1,6 +1,7 @@
 import {Router} from 'express';
-const fs = require ('fs');
-const express = require('express');
+import ProductManager from '../routes/ProductManager';
+import fs from 'fs';
+import express from 'express';
 
 const productRouter = Router ();
 

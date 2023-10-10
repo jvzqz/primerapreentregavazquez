@@ -1,0 +1,45 @@
+ [{
+   "id": 1,
+   "tittle": "Ventilador",
+   "description": "de pie",
+   "price": 58448,
+   "thumbnail": "jpg",
+   "code": "ABC453463",
+   "stock": 8794
+ },
+ {
+   "id": 2,
+   "tittle": "Ventilador",
+   "description": "de pie",
+   "price": 58448,
+   "thumbnail": "jpg",
+   "code": "ABC453463",
+   "stock": 8794
+ },
+ {
+   "id": 3,
+   "tittle": "Ventilador",
+   "description": "de pie",
+   "price": 58448,
+   "thumbnail": "jpg",
+   "code": "ABC453463",
+   "stock": 8794
+ },
+ {
+   "id": 4,
+   "tittle": "Ventilador",
+   "description": "de pie",
+   "price": 58448,
+   "thumbnail": "jpg",
+   "code": "ABC453463",
+   "stock": 8794
+ },
+ {
+   "id": 5,
+   "tittle": "Ventilador",
+   "description": "de pie",
+   "price": 58448,
+   "thumbnail": "jpg",
+   "code": "ABC453463",
+      "stock": 8794
+ }]
