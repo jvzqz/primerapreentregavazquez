@@ -1,7 +1,7 @@
 import express  from 'express';
 import __dirname from './utils.js';
 import handlebars from 'express-handlebars';
-import cartsRouter from './routes/cartsRouter.js';
+import cartRouter from './routes/cartRouter.js';
 import productRouter from './routes/productRouter.js';
 import { Server } from 'socket.io';
 
@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:true}))
 
 app.use('api/products', productRouter);
 
-app.use ('api/carts', cartsRouter);
+app.use ('api/carts', cartRouter);
 
 const socketServer = new Server(httpServer);
 

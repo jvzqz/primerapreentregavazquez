@@ -1,4 +1,16 @@
-<div></div>
-
+<!DOCTYPE html>
+<html>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/src/public/index.js"></script>
+<head>
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul>
+        {{#each products}}
+            <li>{{this.title}} - {{this.price}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html>

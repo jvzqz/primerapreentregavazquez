@@ -1,6 +1,5 @@
-const fs = require ('fs');
-const crypto = require ('crypto');
-
+import fs from 'fs';
+import crypto from 'crypto';
 
 class ProductManager {
 
@@ -41,12 +40,12 @@ class ProductManager {
     
 
     getProducts() {
-        try {
-          const productos = fs.readFileSync(this.path, "utf8");
-          return productos;
-        } catch (error) {
-          return this.products;
-        }
+      try {
+      const productos = fs.readFileSync(this.path, "utf8");
+      return JSON.parse(productos);
+      } catch (error) {
+        return this.products;
+      }
     }
     
 
@@ -68,7 +67,7 @@ class ProductManager {
         } else {
             console.log("Product no encontrado");
         } 
-      }
+    }
      
 
     deleteProducts(id) {
@@ -83,11 +82,11 @@ class ProductManager {
         } else {
           console.log("Producto no encontrado");
         }
-      }
+    }
   
 }
 
 const manager = new ProductManager()
 manager.getProductById(1)
 
-module.exports = ProductManager; 
+export default ProductManager;

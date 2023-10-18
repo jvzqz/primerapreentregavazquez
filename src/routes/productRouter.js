@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import ProductManager from '../routes/ProductManager';
+import ProductManager from '../ProductManager';
 import fs from 'fs';
 import express from 'express';
 
@@ -78,14 +78,19 @@ productRouter.post('/', (req,res)=>{
     products.push(newProduct);
     fs.writeFile('productos.json', JSON.stringify(products, null, 2), 'utf-8');
     res.status(200).json(newProduct);
-})
+});
 
 productRouter.put('/:pid', (req,res)=>{
-    
-})
+  const { pid } = req.params;
+  const updatedData = req.body;
+  ProductManager.updateProduct(parseInt(pid), updatedData);
+  res.json({ message: 'Producto actualizado con éxito' });  
+});
 
 productRouter.delete('/:pid', (req,res)=>{
-    
-})
+  const { pid } = req.params;
+  ProductManager.deleteProduct(parseInt(pid));
+  res.json({ message: 'Producto eliminado con éxito' });
+});
 
 export default productRouter;
