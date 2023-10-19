@@ -30,13 +30,13 @@ cartRouter.post('/:cid/products/:pid', (req,res)=>{
     }
 });
 
-routerCart.get('/:cid/products', (req, res) => {
+cartRouter.get('/:cid/products', (req, res) => {
     const { cid } = req.params;
     const products = CartManager.getProductsInCart(parseInt(cid));
     res.json(products);
 });
 
-routerCart.delete('/:cid/product/:pid', (req, res) => {
+cartRouter.delete('/:cid/product/:pid', (req, res) => {
     const { cid, pid } = req.params;
     const success = CartManager.removeProductFromCart(parseInt(cid), parseInt(pid));
     if (success) {

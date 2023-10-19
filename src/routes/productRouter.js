@@ -1,7 +1,7 @@
 import {Router} from 'express';
 import ProductManager from '../ProductManager';
 import fs from 'fs';
-import express from 'express';
+
 
 const productRouter = Router ();
 
